@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    permissions:
+      contents: write # Add this line to request write permission for GITHUB_TOKEN
 
     steps:
       - name: Checkout code
