@@ -10,3 +10,6 @@ build/
 dist/
 old_versions/
 *.egg-info/
+*.pub
+deploy_key
+
