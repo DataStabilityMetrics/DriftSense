@@ -22,7 +22,7 @@
     
     
       
-        <title>Stability Function - Drift Detection For AI/ML Models</title>
+        <title>Stability Function - Stability & Drift Detection For AI/ML Models</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Drift Detection For AI/ML Models
+            Stability & Drift Detection For AI/ML Models
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -338,12 +338,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
     </a>
-    Drift Detection For AI/ML Models
+    Stability & Drift Detection For AI/ML Models
   </label>
   
     <div class="md-nav__source">
@@ -819,7 +819,7 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      🔍 Overview
     </span>
   </a>
   
@@ -828,11 +828,11 @@
         <li class="md-nav__item">
   <a href="#available-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Available Functions
+      ⚙️ Available Functions
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Available Functions">
+    <nav class="md-nav" aria-label="⚙️ Available Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -870,17 +870,17 @@
         <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      🧠 Notes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Notes">
+    <nav class="md-nav" aria-label="🧠 Notes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage Example
+      ✅ Usage Example
     </span>
   </a>
   
@@ -894,7 +894,7 @@
         <li class="md-nav__item">
   <a href="#feature-stability-across-time" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature Stability Across Time
+      📊 Feature Stability Across Time
     </span>
   </a>
   
@@ -903,7 +903,7 @@
         <li class="md-nav__item">
   <a href="#target-or-model-drift-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Target or Model Drift Example
+      📊 Target or Model Drift Example
     </span>
   </a>
   
@@ -912,7 +912,7 @@
         <li class="md-nav__item">
   <a href="#notes_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      📌 Notes
     </span>
   </a>
   
@@ -921,7 +921,7 @@
         <li class="md-nav__item">
   <a href="#recommended-monitoring-thresholds" class="md-nav__link">
     <span class="md-ellipsis">
-      Recommended Monitoring Thresholds
+      🧪 Recommended Monitoring Thresholds
     </span>
   </a>
   
@@ -930,7 +930,7 @@
         <li class="md-nav__item">
   <a href="#related-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Links
+      🔗 Related Links
     </span>
   </a>
   
@@ -993,11 +993,11 @@
   
 
 
-<h1 id="stabilitydrift-functions-usage-guide">Stability/Drift Functions Usage Guide<a class="headerlink" href="#stabilitydrift-functions-usage-guide" title="Permanent link">&para;</a></h1>
+<h1 id="stability-functions-usage-guide">📊 Stability Functions Usage Guide<a class="headerlink" href="#stability-functions-usage-guide" title="Permanent link">&para;</a></h1>
 <p>This page explains how to use the key stability functions available in the <code>DriftSense</code> package. These functions help measure <strong>data drift</strong>, also called <strong>stability</strong>, for features, targets, and model predictions.</p>
 <p>These functions are essential for understanding how your data, features, and model outputs change over time or across different datasets.</p>
 <hr />
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<h2 id="overview">🔍 Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The package supports different types of stability assessments:</p>
 <ol>
 <li>
@@ -1014,7 +1014,7 @@
 </li>
 </ol>
 <hr />
-<h2 id="available-functions">Available Functions<a class="headerlink" href="#available-functions" title="Permanent link">&para;</a></h2>
+<h2 id="available-functions">⚙️ Available Functions<a class="headerlink" href="#available-functions" title="Permanent link">&para;</a></h2>
 <h3 id="1-calculate_feature_stability">1. <code>calculate_feature_stability()</code><a class="headerlink" href="#1-calculate_feature_stability" title="Permanent link">&para;</a></h3>
 <p>Compares the distribution of a feature in reference and current datasets using a selected binning method.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">calculate_feature_drift</span>
@@ -1043,7 +1043,7 @@
 <hr />
 <h3 id="3-create_drift_report">3. <code>create_drift_report()</code><a class="headerlink" href="#3-create_drift_report" title="Permanent link">&para;</a></h3>
 <p>Generates a HTML report including summarised drift/stability score with binning method used, drift detection flag, bin-wise drift/stability scores for each feature / target at granular level, and warnings for unstable features.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">create_drift_report</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">generate_drift_report</span>
 
 <span class="n">create_drift_report</span><span class="p">(</span>
     <span class="n">reference_data</span><span class="o">=</span><span class="n">ref_df</span><span class="p">,</span>
@@ -1054,14 +1054,14 @@
 <span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h2 id="notes">🧠 Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Binning strategy significantly affects the result; choose based on use case.</li>
 <li>Adaptive binning requires a target variable.</li>
 <li>Feature stability/drift values above a threshold (e.g., 0.1 or 0.2) may indicate drift.</li>
 </ul>
 <hr />
-<h3 id="usage-example">Usage Example<a class="headerlink" href="#usage-example" title="Permanent link">&para;</a></h3>
+<h3 id="usage-example">✅ Usage Example<a class="headerlink" href="#usage-example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">calculate_feature_drift</span>
 
@@ -1072,26 +1072,26 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Drift/Stability Value (CSI): </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="feature-stability-across-time">Feature Stability Across Time<a class="headerlink" href="#feature-stability-across-time" title="Permanent link">&para;</a></h2>
+<h2 id="feature-stability-across-time">📊 Feature Stability Across Time<a class="headerlink" href="#feature-stability-across-time" title="Permanent link">&para;</a></h2>
 <p>To evaluate feature drift between two datasets:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">calculate_feature_drift</span>
 
 <span class="c1"># input_distributions: already binned distributions</span>
-<span class="n">feature_drift_score</span> <span class="o">=</span> <span class="n">calculate_feature_drift</span><span class="p">(</span><span class="n">expected_dist</span><span class="p">,</span> <span class="n">actual_dist</span><span class="p">)</span>
+<span class="n">feature_drift_score</span> <span class="o">=</span> <span class="n">calculate_feature_stability</span><span class="p">(</span><span class="n">expected_dist</span><span class="p">,</span> <span class="n">actual_dist</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Feature Drift/Stability (CSI):&quot;</span><span class="p">,</span> <span class="n">feature_drift_score</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="target-or-model-drift-example">Target or Model Drift Example<a class="headerlink" href="#target-or-model-drift-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">DriftSense</span> <span class="kn">import</span> <span class="n">calculate_feature_drift</span>
+<h2 id="target-or-model-drift-example">📊 Target or Model Drift Example<a class="headerlink" href="#target-or-model-drift-example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">DriftSense</span> <span class="kn">import</span> <span class="n">calculate_target_stability</span>
 
 <span class="c1"># Compare target or model prediction distributions over time</span>
-<span class="n">target_drift</span> <span class="o">=</span> <span class="n">calculate_feature_drift</span><span class="p">(</span><span class="n">expected_target_bins</span><span class="p">,</span> <span class="n">actual_target_bins</span><span class="p">)</span>
+<span class="n">target_drift</span> <span class="o">=</span> <span class="n">calculate_target_stability</span><span class="p">(</span><span class="n">expected_target_bins</span><span class="p">,</span> <span class="n">actual_target_bins</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target Drift:&quot;</span><span class="p">,</span> <span class="n">target_drift</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="notes_1">Notes<a class="headerlink" href="#notes_1" title="Permanent link">&para;</a></h2>
+<h2 id="notes_1">📌 Notes<a class="headerlink" href="#notes_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Drift values &gt; 0.2 generally indicate significant drift.</li>
 <li>Drift methods require <strong>binning</strong> to be performed. You can use <code>get_bin_edges()</code> to see what bins are generated using vrious binning strategies.</li>
@@ -1099,15 +1099,35 @@
   This monitoring frequency is dependent on the business usage of the model.</li>
 </ul>
 <hr />
-<h2 id="recommended-monitoring-thresholds">Recommended Monitoring Thresholds<a class="headerlink" href="#recommended-monitoring-thresholds" title="Permanent link">&para;</a></h2>
-<p>The Following guidance is applicable for PSI/CSI drift method 
-| Stability Metric | Threshold        | Interpretation                 |
-|------------------|------------------|--------------------------------|
-| Drift &lt; 0.1        | Stable            | No action needed               |
-| 0.1 ≤ Drift ≤ 0.2  | Moderate Drift    | Investigate if recurring       |
-| Drift &gt; 0.2        | High Drift        | Immediate attention required   |</p>
+<h2 id="recommended-monitoring-thresholds">🧪 Recommended Monitoring Thresholds<a class="headerlink" href="#recommended-monitoring-thresholds" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Stability Metric</th>
+<th>Threshold</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drift &lt; 0.1</td>
+<td>Stable</td>
+<td>No action needed</td>
+</tr>
+<tr>
+<td>0.1 ≤ Drift ≤ 0.2</td>
+<td>Moderate Drift</td>
+<td>Investigate if recurring</td>
+</tr>
+<tr>
+<td>Drift &gt; 0.2</td>
+<td>High Drift</td>
+<td>Immediate attention required</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="related-links">Related Links<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
+<h2 id="related-links">🔗 Related Links<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../binningstrategies/">Feature Binning</a></li>
 <li><a href="../../reference/calculate_all_features_drift/">Feature Stability API Reference</a></li>

@@ -22,7 +22,7 @@
     
     
       
-        <title>Binning Function - Drift Detection For AI/ML Models</title>
+        <title>Binning Function - Stability & Drift Detection For AI/ML Models</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Drift Detection For AI/ML Models
+            Stability & Drift Detection For AI/ML Models
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -338,12 +338,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
     </a>
-    Drift Detection For AI/ML Models
+    Stability & Drift Detection For AI/ML Models
   </label>
   
     <div class="md-nav__source">
@@ -814,7 +814,7 @@
         <li class="md-nav__item">
   <a href="#related-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Links
+      🔗 Related Links
     </span>
   </a>
   
@@ -900,7 +900,7 @@
   
 
 
-<h1 id="feature-binning">Feature Binning<a class="headerlink" href="#feature-binning" title="Permanent link">&para;</a></h1>
+<h1 id="feature-binning">🧠 Feature Binning<a class="headerlink" href="#feature-binning" title="Permanent link">&para;</a></h1>
 <p>This section explains how to bin features using the available methods in <code>DriftSense</code>.</p>
 <hr />
 <h2 id="equal-width-example">Equal Width Example<a class="headerlink" href="#equal-width-example" title="Permanent link">&para;</a></h2>
@@ -911,7 +911,7 @@
 </code></pre></div>
 <hr />
 <h2 id="adaptive-binning-example">Adaptive Binning Example<a class="headerlink" href="#adaptive-binning-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">get_bin_edges</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">driftsense</span> <span class="kn">import</span> <span class="n">get_bin_edges_csi</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">])</span>
@@ -921,7 +921,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bin edges:&quot;</span><span class="p">,</span> <span class="n">edges</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="related-links">Related Links<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
+<h2 id="related-links">🔗 Related Links<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../reference/get_bin_edges/">API: get_bin_edges</a></li>
 </ul>

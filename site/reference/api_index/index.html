@@ -22,7 +22,7 @@
     
     
       
-        <title>API Overview - Drift Detection For AI/ML Models</title>
+        <title>API Overview - Stability & Drift Detection For AI/ML Models</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Drift Detection For AI/ML Models
+            Stability & Drift Detection For AI/ML Models
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -338,12 +338,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
     </a>
-    Drift Detection For AI/ML Models
+    Stability & Drift Detection For AI/ML Models
   </label>
   
     <div class="md-nav__source">
@@ -606,7 +606,7 @@
         <li class="md-nav__item">
   <a href="#modules-covered" class="md-nav__link">
     <span class="md-ellipsis">
-      Modules Covered
+      📂 Modules Covered
     </span>
   </a>
   
@@ -615,17 +615,17 @@
         <li class="md-nav__item">
   <a href="#api-documentation-topics" class="md-nav__link">
     <span class="md-ellipsis">
-      API Documentation Topics
+      🧩 API Documentation Topics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="API Documentation Topics">
+    <nav class="md-nav" aria-label="🧩 API Documentation Topics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#binning-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Binning Function
+      🔹 Binning Function
     </span>
   </a>
   
@@ -634,7 +634,7 @@
           <li class="md-nav__item">
   <a href="#stability-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Stability Function
+      🔹 Stability Function
     </span>
   </a>
   
@@ -643,7 +643,7 @@
           <li class="md-nav__item">
   <a href="#stability-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Stability Report
+      🔹 Stability Report
     </span>
   </a>
   
@@ -657,7 +657,7 @@
         <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      📘 Notes
     </span>
   </a>
   
@@ -666,7 +666,7 @@
         <li class="md-nav__item">
   <a href="#navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Navigation
+      🧭 Navigation
     </span>
   </a>
   
@@ -942,11 +942,11 @@
   
 
 
-<h1 id="api-overview">API Overview<a class="headerlink" href="#api-overview" title="Permanent link">&para;</a></h1>
+<h1 id="api-overview">📖 API Overview<a class="headerlink" href="#api-overview" title="Permanent link">&para;</a></h1>
 <p>Welcome to the <strong>DriftSense</strong> API Reference Guide. This section provides technical documentation for all core functions in the package.</p>
 <p>Use this guide to understand the function signatures, expected parameters, and example usages. This is especially helpful when integrating the package into larger projects or developing automation and monitoring tools.</p>
 <hr />
-<h2 id="modules-covered">Modules Covered<a class="headerlink" href="#modules-covered" title="Permanent link">&para;</a></h2>
+<h2 id="modules-covered">📂 Modules Covered<a class="headerlink" href="#modules-covered" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -961,26 +961,26 @@
 </tr>
 <tr>
 <td><code>calculate_feature_drift</code></td>
-<td>Computes drift or stability score (e.g., CSI or PSI) for feature or target or prediction variable.</td>
+<td>Computes drift or stability score (e.g., CSI or PSI) for feature and target variable.</td>
 </tr>
 <tr>
 <td><code>calculate_all_features_drift</code></td>
-<td>Computes drift or stability for all features in the dataframe including target and prediction (if available within dataframe).</td>
+<td>Computes drift or stability for all features in the dataframe (including predictions).</td>
 </tr>
 <tr>
 <td><code>create_drift_report</code></td>
-<td>Generates drift or stability report of features, target, prediction variable (if available within dataframe).</td>
+<td>Generates drift or stability report of feature columns and target column in the dataset.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="api-documentation-topics">API Documentation Topics<a class="headerlink" href="#api-documentation-topics" title="Permanent link">&para;</a></h2>
-<h3 id="binning-function">Binning Function<a class="headerlink" href="#binning-function" title="Permanent link">&para;</a></h3>
+<h2 id="api-documentation-topics">🧩 API Documentation Topics<a class="headerlink" href="#api-documentation-topics" title="Permanent link">&para;</a></h2>
+<h3 id="binning-function">🔹 Binning Function<a class="headerlink" href="#binning-function" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../get_bin_edges/"><code>get_bin_edges</code></a><br />
   Calculate bin edges using strategies like equal width binning, equal frequency binning, adaptive, and more.</li>
 </ul>
-<h3 id="stability-function">Stability Function<a class="headerlink" href="#stability-function" title="Permanent link">&para;</a></h3>
+<h3 id="stability-function">🔹 Stability Function<a class="headerlink" href="#stability-function" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a href="../calculate_feature_drift/"><code>calculate_feature_drift</code></a><br />
@@ -991,7 +991,7 @@
   Evaluates drift for all features columns (e.g. CSI) including target column and predictions (e.g. CSI/PSI) .</p>
 </li>
 </ul>
-<h3 id="stability-report">Stability Report<a class="headerlink" href="#stability-report" title="Permanent link">&para;</a></h3>
+<h3 id="stability-report">🔹 Stability Report<a class="headerlink" href="#stability-report" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a href="../create_drift_report/"><code>create_drift_report</code></a></p>
@@ -1004,15 +1004,15 @@
 </li>
 </ul>
 <hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h2 id="notes">📘 Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>For adaptive binning strategy, <code>target</code> variable is required.</li>
+<li>For adaptive binning strategy, <code>target</code> variable are required.</li>
 <li>For domain-specific binning, list of bin edges should be provided.</li>
-<li>Currently this package supports PSI and CSI methods for drift metrics. </li>
+<li>Current supports PSI and CSI methods ffor drift metrics. </li>
 <li>Future releases will include additional methods of drift evaluation. </li>
 </ul>
 <hr />
-<h2 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h2>
+<h2 id="navigation">🧭 Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../">Home</a></li>
 <li><a href="../../usage/">Usage Guide</a></li>

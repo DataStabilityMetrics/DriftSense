@@ -22,7 +22,7 @@
     
     
       
-        <title>Installation - Drift Detection For AI/ML Models</title>
+        <title>Installation - Stability & Drift Detection For AI/ML Models</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href=".." title="Stability &amp; Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../img/drift_sense.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Drift Detection For AI/ML Models
+            Stability & Drift Detection For AI/ML Models
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -338,12 +338,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href=".." title="Stability &amp; Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../img/drift_sense.png" alt="logo">
 
     </a>
-    Drift Detection For AI/ML Models
+    Stability & Drift Detection For AI/ML Models
   </label>
   
     <div class="md-nav__source">
@@ -536,7 +536,7 @@
         <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      ✅ Requirements
     </span>
   </a>
   
@@ -545,11 +545,11 @@
         <li class="md-nav__item">
   <a href="#installation-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation Steps
+      📥 Installation Steps
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation Steps">
+    <nav class="md-nav" aria-label="📥 Installation Steps">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -576,9 +576,18 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#running-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Running Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Next Steps
+      📚 Next Steps
     </span>
   </a>
   
@@ -921,10 +930,10 @@
   
 
 
-<h1 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h1>
+<h1 id="installation-guide">📦 Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h1>
 <p>Welcome to the <strong>DriftSense</strong> installation guide. Follow the instructions below to install the package and set up your environment for using the binning and stability evaluation utilities.</p>
 <hr />
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<h2 id="requirements">✅ Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>Before installing the package, ensure the following dependencies are available:</p>
 <ul>
 <li><code>Python 3.7+</code></li>
@@ -933,18 +942,26 @@
 <li><code>pytest</code> <em>(optional, for testing purposes)</em></li>
 </ul>
 <hr />
-<h2 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h2>
+<h2 id="installation-steps">📥 Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h2>
 <h3 id="option-1-install-via-pip-recommended-for-stable-version">Option 1: Install via pip (recommended for stable version)<a class="headerlink" href="#option-1-install-via-pip-recommended-for-stable-version" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>DriftSense
 </code></pre></div>
 <hr />
 <h3 id="option-2-clone-from-github-and-install-locally">Option 2: Clone from GitHub and install locally<a class="headerlink" href="#option-2-clone-from-github-and-install-locally" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DataStabilityMetrics/DriftSense.git
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/data-stability-metrics/DriftSense.git
 <span class="nb">cd</span><span class="w"> </span>DriftSense
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
 <hr />
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h2 id="running-tests">🧪 Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h2>
+<p>To ensure DriftSense is installed correctly, run the unit tests:</p>
+<div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>tests/
+</code></pre></div>
+<blockquote>
+<p>✅ All test cases cover various binning strategies and edge conditions, such as NaNs, empty input, and invalid types.</p>
+</blockquote>
+<hr />
+<h2 id="next-steps">📚 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Go to the <a href="../usage/">Usage Guide</a> for tutorials and code examples in ML evaluation or monitoring system</li>
 <li>Explore <a href="../reference/api_index/">API Reference</a> to integrate it into ML evaluation or monitoring system</li>

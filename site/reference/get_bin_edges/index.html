@@ -22,7 +22,7 @@
     
     
       
-        <title>Binning Function - Drift Detection For AI/ML Models</title>
+        <title>Binning Function - Stability & Drift Detection For AI/ML Models</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#driftsense.get_bin_edges" class="md-skip">
+        <a href="#stability_drift_metrics.get_bin_edges" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-header__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Drift Detection For AI/ML Models
+            Stability & Drift Detection For AI/ML Models
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -338,12 +338,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Drift Detection For AI/ML Models" data-md-component="logo">
+    <a href="../.." title="Stability &amp; Drift Detection For AI/ML Models" class="md-nav__button md-logo" aria-label="Stability & Drift Detection For AI/ML Models" data-md-component="logo">
       
   <img src="../../img/drift_sense.png" alt="logo">
 
     </a>
-    Drift Detection For AI/ML Models
+    Stability & Drift Detection For AI/ML Models
   </label>
   
     <div class="md-nav__source">
@@ -627,7 +627,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#driftsense.get_bin_edges" class="md-nav__link">
+  <a href="#stability_drift_metrics.get_bin_edges" class="md-nav__link">
     <span class="md-ellipsis">
       get_bin_edges
     </span>
@@ -637,7 +637,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#driftsense.get_bin_edges.get_bin_edges" class="md-nav__link">
+  <a href="#stability_drift_metrics.get_bin_edges.get_bin_edges" class="md-nav__link">
     <span class="md-ellipsis">
       get_bin_edges
     </span>
@@ -651,31 +651,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#real-usage-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters
+      ✅ Real Usage Examples
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage Examples">
+    <nav class="md-nav" aria-label="✅ Real Usage Examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -713,7 +695,34 @@
         <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      💡 Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Returns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Requirements
     </span>
   </a>
   
@@ -722,7 +731,7 @@
         <li class="md-nav__item">
   <a href="#see-also" class="md-nav__link">
     <span class="md-ellipsis">
-      See Also
+      🧪 See Also
     </span>
   </a>
   
@@ -982,11 +991,11 @@
 
 
 
-<h2 id="driftsense.get_bin_edges" class="doc doc-heading">
-            <code>driftsense.get_bin_edges</code>
+<h2 id="stability_drift_metrics.get_bin_edges" class="doc doc-heading">
+            <code>stability_drift_metrics.get_bin_edges</code>
 
 
-<a href="#driftsense.get_bin_edges" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#stability_drift_metrics.get_bin_edges" class="headerlink" title="Permanent link">&para;</a></h2>
 
     <div class="doc doc-contents first">
 
@@ -1011,10 +1020,10 @@
 <div class="doc doc-object doc-function">
 
 
-<h3 id="driftsense.get_bin_edges.get_bin_edges" class="doc doc-heading">
+<h3 id="stability_drift_metrics.get_bin_edges.get_bin_edges" class="doc doc-heading">
             <code class="highlight language-python"><span class="n">get_bin_edges</span><span class="p">(</span><span class="n">reference</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">bins</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;equal_width&#39;</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
 
-<a href="#driftsense.get_bin_edges.get_bin_edges" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#stability_drift_metrics.get_bin_edges.get_bin_edges" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
     <div class="doc doc-contents ">
@@ -1023,7 +1032,7 @@
 <p>This function is used for binning continuous variables into discrete intervals, 
 commonly used in statistical metrics for stability evaluation (such as CSI - Characteristic Stability Index or PSI - Population Stability Index).</p>
 <p>This function supports multiple binning strategies.</p>
-<h5 id="driftsense.get_bin_edges.get_bin_edges--parameters">Parameters:<a class="headerlink" href="#driftsense.get_bin_edges.get_bin_edges--parameters" title="Permanent link">&para;</a></h5>
+<h5 id="stability_drift_metrics.get_bin_edges.get_bin_edges--parameters">Parameters:<a class="headerlink" href="#stability_drift_metrics.get_bin_edges.get_bin_edges--parameters" title="Permanent link">&para;</a></h5>
 <ul>
 <li>
 <p>reference : array-like
@@ -1062,12 +1071,12 @@ commonly used in statistical metrics for stability evaluation (such as CSI - Cha
 <p>Required if method='adaptive'. Target variable used to guide DecisionTree-based binning.</p>
 </li>
 </ul>
-<h5 id="driftsense.get_bin_edges.get_bin_edges--returns">Returns:<a class="headerlink" href="#driftsense.get_bin_edges.get_bin_edges--returns" title="Permanent link">&para;</a></h5>
+<h5 id="stability_drift_metrics.get_bin_edges.get_bin_edges--returns">Returns:<a class="headerlink" href="#stability_drift_metrics.get_bin_edges.get_bin_edges--returns" title="Permanent link">&para;</a></h5>
 <p>list or np.ndarray</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">The</span><span class="w"> </span><span class="nv">list</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">bin</span><span class="w"> </span><span class="nv">edges</span><span class="w"> </span><span class="ss">(</span><span class="nv">or</span><span class="w"> </span><span class="nv">categorical</span><span class="w"> </span><span class="nv">bin</span><span class="w"> </span><span class="nv">labels</span><span class="ss">)</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">binning</span>.
 </code></pre></div>
 
-<h5 id="driftsense.get_bin_edges.get_bin_edges--raises">Raises:<a class="headerlink" href="#driftsense.get_bin_edges.get_bin_edges--raises" title="Permanent link">&para;</a></h5>
+<h5 id="stability_drift_metrics.get_bin_edges.get_bin_edges--raises">Raises:<a class="headerlink" href="#stability_drift_metrics.get_bin_edges.get_bin_edges--raises" title="Permanent link">&para;</a></h5>
 <ul>
 <li>
 <p>ValueError:</p>
@@ -1078,7 +1087,7 @@ commonly used in statistical metrics for stability evaluation (such as CSI - Cha
 <p>If the input is not numeric where required, or if domain bins are improperly formatted.</p>
 </li>
 </ul>
-<h5 id="driftsense.get_bin_edges.get_bin_edges--examples">Examples:<a class="headerlink" href="#driftsense.get_bin_edges.get_bin_edges--examples" title="Permanent link">&para;</a></h5>
+<h5 id="stability_drift_metrics.get_bin_edges.get_bin_edges--examples">Examples:<a class="headerlink" href="#stability_drift_metrics.get_bin_edges.get_bin_edges--examples" title="Permanent link">&para;</a></h5>
 <blockquote>
 <blockquote>
 <blockquote>
@@ -1104,7 +1113,46 @@ array([10., 30., 50.])</p>
     </div>
 
 </div><hr />
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h2 id="real-usage-examples">✅ Real Usage Examples<a class="headerlink" href="#real-usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="1-equal-width-binning">1. Equal-width Binning<a class="headerlink" href="#1-equal-width-binning" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">get_bin_edges</span> <span class="kn">import</span> <span class="n">get_bin_edges</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+<span class="n">bin_edges</span> <span class="o">=</span> <span class="n">get_bin_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>[10.0, 20.0]
+</code></pre></div></p>
+<hr />
+<h3 id="2-equal-frequency-quantile-binning">2. Equal-frequency (quantile) Binning<a class="headerlink" href="#2-equal-frequency-quantile-binning" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">bin_edges</span> <span class="o">=</span> <span class="n">get_bin_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;quantile&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>[10.0, 20.0]
+</code></pre></div></p>
+<p><em>Note:</em> The values may vary slightly based on distribution and quantiles.</p>
+<hr />
+<h3 id="3-adaptive-binning-with-target-variable">3. Adaptive Binning with Target Variable<a class="headerlink" href="#3-adaptive-binning-with-target-variable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">target</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">bin_edges</span> <span class="o">=</span> <span class="n">get_bin_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;adaptive&quot;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Output (example):</strong>
+<div class="highlight"><pre><span></span><code>[12.5, 27.5]
+</code></pre></div></p>
+<hr />
+<h2 id="notes">💡 Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If using <code>"adaptive"</code>, the <code>target</code> argument must be passed.</li>
+<li>The returned list contains bin <em>edges</em>, not bin <em>counts</em>.</li>
+<li>NaN values in <code>data</code> are automatically filtered out before binning.</li>
+<li>The bin edges returned are always sorted and do not include <code>min</code> or <code>max</code> bounds.</li>
+</ul>
+<hr />
+<h2 id="parameters">📘 Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1142,52 +1190,20 @@ array([10., 30., 50.])</p>
 </tbody>
 </table>
 <hr />
-<h2 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h2>
+<h2 id="returns">🔁 Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>np.ndarray</code>: An array of bin edge values, excluding the min and max of the data.</li>
 </ul>
 <hr />
-<h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
-<h3 id="1-equal-width-binning">1. Equal-width Binning<a class="headerlink" href="#1-equal-width-binning" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">get_bin_edges</span> <span class="kn">import</span> <span class="n">get_bin_edges</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
-<span class="n">bin_edges</span> <span class="o">=</span> <span class="n">get_bin_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Output:</strong>
-<div class="highlight"><pre><span></span><code>[10.0, 20.0]
-</code></pre></div></p>
-<hr />
-<h3 id="2-equal-frequency-quantile-binning">2. Equal-frequency (quantile) Binning<a class="headerlink" href="#2-equal-frequency-quantile-binning" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">bin_edges</span> <span class="o">=</span> <span class="n">get_bin_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;quantile&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Output:</strong>
-<div class="highlight"><pre><span></span><code>[10.0, 20.0]
-</code></pre></div></p>
-<hr />
-<h3 id="3-adaptive-binning-with-target-variable">3. Adaptive Binning with Target Variable<a class="headerlink" href="#3-adaptive-binning-with-target-variable" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">target</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-<span class="n">bin_edges</span> <span class="o">=</span> <span class="n">get_bin_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;adaptive&quot;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Output (example):</strong>
-<div class="highlight"><pre><span></span><code>[12.5, 27.5]
-</code></pre></div></p>
-<hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h2 id="requirements">🛠️ Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
-<li>If using <code>"adaptive"</code>, the <code>target</code> argument must be passed.</li>
-<li>The returned list contains bin <em>edges</em>, not bin <em>counts</em>.</li>
-<li>NaN values in <code>data</code> are automatically filtered out before binning.</li>
-<li>The bin edges returned are always sorted and do not include <code>min</code> or <code>max</code> bounds.</li>
+<li><code>numpy</code></li>
+<li><code>scikit-learn</code></li>
 </ul>
 <hr />
-<h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<h2 id="see-also">🧪 See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../">Drift Calculation Guide</a></li>
+<li><a href="../../">PSI Calculation Guide</a></li>
 </ul>
 
 
