@@ -1,0 +1,59 @@
+[build-system]
+# Specifies the tools required to build your package
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driftsense"
+version = "0.0.3"
+description = "A Python package for data stability and drift detection and monitoring."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    { name = "Rakesh Pardeshi", email = "rakeshpardeshi25@gmail.com" }
+]
+
+maintainers = [
+  {name = "Rakesh Pardeshi", email = "rakeshpardeshi25@gmail.com" }
+]
+keywords = ["data-drift", "stability", "model-monitoring", "psi", "csi"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+	"Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+]
+
+# Required dependencies for the package to function
+dependencies = [
+    "numpy >=1.19.0",
+    "pandas >=1.1.0",
+    "scikit-learn >=0.24.0"
+]
+
+[project.optional-dependencies]
+# Development dependencies
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+# Documentation dependencies
+docs = [
+    "mkdocs",
+    "mkdocstrings[python]",
+    "mkdocs-material"
+]
+
+[project.urls]
+"Homepage" = "https://DataStabilityMetrics.github.io/DriftSense/"
+"Documentation" = "https://DataStabilityMetrics.github.io/DriftSense/"
+"Source" = "https://github.com/DataStabilityMetrics/DriftSense.git"
+"Issue Tracker" = "https://github.com/DataStabilityMetrics/DriftSense/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]

@@ -4,10 +4,9 @@ __pycache__/
 *.log         # Ignore all log files
 *.swp         # Ignore all Vim swap files 
 *.pypirc
-deploy_key.pub
-deploy_key
 
 # Distribution / packaging
 build/
 dist/
+old_versions/
 *.egg-info/
