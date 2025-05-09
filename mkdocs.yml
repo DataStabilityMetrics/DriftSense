@@ -1,0 +1,92 @@
+site_name: Drift Detection For AI/ML Models 
+site_url: https://DataStabilityMetrics.github.io/DriftSense/
+repo_url: https://github.com/DataStabilityMetrics/DriftSense.git
+repo_name: DriftSense
+theme:
+  name: material
+  favicon: './img/drift_sense.png'
+  logo: './img/drift_sense.png'
+  highligtjs: true
+  hljs_languages: 
+    - python
+    - yaml
+
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - navigation.instant
+    - navigation.sections
+    - toc.integrate
+    - toc.expand
+    - toc.follow
+    - content.tabs.link
+    - navigation.footer
+  static_templates: []
+
+# Ensure a proper directory structure for assets
+docs_dir: docs
+
+nav:
+  - Home:
+      - Overview: index.md
+      - Binning Strategies: binningstrategies.md
+      - Drift Types: drifttypes.md
+  - Installation: installation.md
+  - API Reference:
+      - API Overview: reference/api_index.md
+      - Binning Function: reference/get_bin_edges.md
+      - Stability Function (One Feature): reference/calculate_feature_drift.md
+      - Stability Function (All Features): reference/calculate_all_features_drift.md
+      - Stability Report: reference/create_drift_report.md
+  - Usage Guide: 
+      - Usage Overview: usage/index.md
+      - Binning Function: usage/get_bin_edges_usage.md
+      - Stability Function: usage/stability_function.md
+  - FAQ: faqs.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          #paths: [stability_drift_metrics]
+          options:
+            docstring_style: google  # or numpy
+            show_source: true
+            show_root_heading: true
+            show_signature_annotations: true
+            show_signature: true
+          #selection:
+          #  filters:
+          #    - "!^_"  # exclude private functions
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+      toc_depth: 2-3
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.emoji

@@ -1,0 +1,7 @@
+,Min Bin,Max Bin,Reference Count,Actual Count,Reference %,Actual %,CSI Value
+0,Assoc-acdm,Assoc-acdm,1,0,0.1,1e-10,2.0723265816223146
+1,Assoc-voc,Assoc-voc,0,0,1e-10,1e-10,0.0
+2,Bachelors,Bachelors,2,0,0.2,1e-10,4.28328260135963
+3,HS-grad,HS-grad,3,10,0.3,1.0,0.8427809630281552
+4,Masters,Masters,2,0,0.2,1e-10,4.28328260135963
+5,Some-college,Some-college,2,0,0.2,1e-10,4.28328260135963

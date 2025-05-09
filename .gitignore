@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+#*.pyc         # Ignore all compiled Python files
+*.log         # Ignore all log files
+*.swp         # Ignore all Vim swap files 
+*.pypirc
+
+# Distribution / packaging
+build/
+dist/
+old_versions/
+*.egg-info/
