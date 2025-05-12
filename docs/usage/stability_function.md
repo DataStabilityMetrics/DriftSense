@@ -182,11 +182,11 @@ create_drift_report(summary_df = summary_df,
 ## Recommended Monitoring Thresholds
 The Following guidance is applicable for PSI/CSI drift method 
 
-|Stability Metric   |Threshold         |Interpretation                 |
-|-------------------|-----------------|--------------------------------|
-|Drift < 0.1        |Stable            |No action needed               |
-|0.1 ≤ Drift ≤ 0.2  |Moderate Drift    |Investigate if recurring       |
-|Drift > 0.2        |High Drift        |Immediate attention required   |
+|Stability/Drift Threshold    |Interpretation                           |
+|-----------------------------|-----------------------------------------|
+|Drift < 0.1                  |Stable - No action needed                |
+|0.1 ≤ Drift ≤ 0.2            |Moderate Drift - Investigate if recurring|
+|Drift > 0.2                  |High Drift - Immediate attention required|
 
 ---
 
