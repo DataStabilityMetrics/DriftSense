@@ -1,6 +1,9 @@
 from typing import Union, Dict, Tuple
 import pandas as pd
 
+from .calculate_feature_drift import calculate_feature_drift
+
+
 def calculate_all_features_drift(
     reference_df: pd.DataFrame,
     new_df: pd.DataFrame,
@@ -24,9 +27,9 @@ def calculate_all_features_drift(
     
     - Tuple containing:
     
-        1. DataFrame with CSI values for each column.
+        1. DataFrame with Drift (CSI/PSI) values for all features.
         
-        2. Dictionary of detailed CSI DataFrames for each feature.
+        2. Dictionary of Drift (CSI/PSI) dataFrames for all features.
         
     """
 
@@ -57,14 +60,12 @@ def calculate_all_features_drift(
             drift_output = calculate_feature_drift(reference, actual, bins=domain_bins, method=method)
         else:
             drift_output = calculate_feature_drift(reference, actual, bins=bins, method=method)
-        #print(binning_method, csi_value, csi_df)
-        ## COMPLETE CHUNK HERE - FOR SPECIFIC BINNING FOR ALL COLUMNS
         
-        csi_results.append({"Feature": col, "Binning Strategy": drift_output["Binning Strategy"], "CSI": drift_output['Drift Score']})
+        csi_results.append({"Feature": col, "Binning Strategy": drift_output["Binning Strategy"], "Drift": drift_output['Drift Score']})
         
         detailed_csi_dfs[col] = drift_output['Drift DataFrame']
         #except Exception as e:
         #    print(f"Skipping column {col} due to error: {e}")
-    csi_results = pd.DataFrame(csi_results).sort_values(by="CSI", ascending=False)
+    csi_results = pd.DataFrame(csi_results).sort_values(by="Drift", ascending=False).reset_index()
     #detailed_csi_dfs = pd.DataFrame(detailed_csi_dfs)   
     return csi_results, detailed_csi_dfs

@@ -25,39 +25,121 @@ The package supports different types of stability assessments:
 
 ## Available Functions
 
-### 1. `calculate_feature_stability()`
+### 1. `calculate_feature_drift()`
 
 Compares the distribution of a feature in reference and current datasets using a selected binning method.
 
+
+### Usage Example
+
 ```python
+import numpy as np
 from driftsense import calculate_feature_drift
 
-stability_score = calculate_feature_drift(
-    reference_data=ref_df["feature_1"],
-    current_data=curr_df["feature_1"],
-    method="equal_width",  # or "quantile", "adaptive", etc.
-    bins=5
-)
-print("Drift/Stability Score:", stability_score)
+expected = np.array([0.25, 0.25, 0.25, 0.25])
+actual = np.array([0.25, 0.20, 0.30, 0.20])
+
+drift_result = calculate_feature_drift(expected, actual)
+print(f"Drift or Stability Value: {drift_result['Drift Score']:.4f}")
+```
+
+**Output:**
+```text
+Drift or Stability Value: 17.6160
 ```
 
 ---
 
-### 2. `calculate_all_features_stability()`
+```python
+from sklearn.datasets import load_iris
+import pandas as pd
+
+# Load the Iris dataset
+iris_features = pd.DataFrame(load_iris().data, columns = ['sepal length (cm)', 
+                                                          'sepal width (cm)', 
+                                                          'petal length (cm)', 
+                                                          'petal width (cm)'])
+
+
+iris_target = pd.DataFrame(load_iris().target, columns = ['species'])
+
+
+reference_df = pd.concat([iris_features, iris_target], axis = 1)
+monitoring_df = reference_df.sample(100, random_state=1)
+
+```
+
+
+```python
+from driftsense.calculate_feature_drift import calculate_feature_drift
+
+stability_score = calculate_feature_drift(
+    reference=reference_df["sepal length (cm)"],
+    new=monitoring_df["sepal length (cm)"],
+    method="equal_width",
+    bins=5)
+
+stability_score['Binning Strategy']
+```
+
+**Output:**
+```text
+'equal_width'
+```
+
+```python
+stability_score['Drift Score']
+```
+
+**Output:**
+```text
+0.04438164076112577
+```
+
+```python
+stability_score['Drift DataFrame']
+```
+
+**Output:**
+```text
+
+	Min Bin	  Max Bin		Reference Count		New Count		Reference %		New %	Drift Value
+0	-inf	  5.02				32					14			  0.213333		0.14	  0.030889
+1	5.02	  5.74				41					31			  0.273333		0.31	  0.004616
+2	5.74	  6.46				42					28			  0.280000		0.28	  0.000000
+3	6.46	  7.18				24					17			  0.160000		0.17	  0.000606
+4	7.18	  inf				11					10			  0.073333		0.10	  0.008271
+
+```
+
+---
+
+### 2. `calculate_all_features_drift()`
 
 Calculates stability scores for **all numeric features** in your dataset.
 
 ```python
 from driftsense import calculate_all_features_drift
 
-stability_df = calculate_all_features_drift(
-    reference_data=ref_df,
-    current_data=curr_df,
-    method="quantile",
+stability_results = calculate_all_features_drift(
+    reference_df=reference_df,
+    new_df=monitoring_df,
+    method="equal_width",
     bins=10
 )
-print(stability_df.head())
+stability_results[0]
 ```
+
+**Output:**
+```text
+	Feature			 Binning Strategy	      Drift
+petal width (cm)	   equal_width			0.145382
+sepal length (cm)	   equal_width			0.052722
+petal length (cm)	   equal_width			0.032107
+sepal width (cm)	   equal_width			0.022999
+species	               domain	    		0.006064
+```
+
 
 ---
 
@@ -67,14 +149,15 @@ Generates a HTML report including summarised drift/stability score with binning 
 
 ```python
 from driftsense import create_drift_report
+ 
+summary_df = stability_results[0]
+detailed_dfs = stability_results[1]
 
-create_drift_report(
-    reference_data=ref_df,
-    current_data=curr_df,
-    method="adaptive",
-    bins=4,
-    output_path="Drift_Stability_Report.html"
-)
+create_drift_report(summary_df = summary_df,
+					detailed_dfs = detailed_dfs,
+					method="equal_width",
+					bins=4,
+					output_path="Drift_Stability_Report.html")
 ```
 
 ---
@@ -84,49 +167,6 @@ create_drift_report(
 - Binning strategy significantly affects the result; choose based on use case.
 - Adaptive binning requires a target variable.
 - Feature stability/drift values above a threshold (e.g., 0.1 or 0.2) may indicate drift.
-
----
-
-### Usage Example
-
-```python
-import numpy as np
-from driftsense import calculate_feature_drift
-
-expected = np.array([0.25, 0.25, 0.25, 0.25])
-actual = np.array([0.10, 0.20, 0.30, 0.40])
-
-value = calculate_feature_drift(expected, actual)
-print(f"Drift/Stability Value (CSI): {value:.4f}")
-```
-
----
-
-## Feature Stability Across Time
-
-To evaluate feature drift between two datasets:
-
-```python
-from driftsense import calculate_feature_drift
-
-# input_distributions: already binned distributions
-feature_drift_score = calculate_feature_drift(expected_dist, actual_dist)
-
-print("Feature Drift/Stability (CSI):", feature_drift_score)
-```
-
----
-
-## Target or Model Drift Example
-
-```python
-from DriftSense import calculate_feature_drift
-
-# Compare target or model prediction distributions over time
-target_drift = calculate_feature_drift(expected_target_bins, actual_target_bins)
-
-print("Target Drift:", target_drift)
-```
 
 ---
 
@@ -141,11 +181,12 @@ print("Target Drift:", target_drift)
 
 ## Recommended Monitoring Thresholds
 The Following guidance is applicable for PSI/CSI drift method 
-| Stability Metric | Threshold        | Interpretation                 |
-|------------------|------------------|--------------------------------|
-| Drift < 0.1        | Stable            | No action needed               |
-| 0.1 ≤ Drift ≤ 0.2  | Moderate Drift    | Investigate if recurring       |
-| Drift > 0.2        | High Drift        | Immediate attention required   |
+
+|Stability Metric   |Threshold         |Interpretation                 |
+|-------------------|-----------------|--------------------------------|
+|Drift < 0.1        |Stable            |No action needed               |
+|0.1 ≤ Drift ≤ 0.2  |Moderate Drift    |Investigate if recurring       |
+|Drift > 0.2        |High Drift        |Immediate attention required   |
 
 ---
 

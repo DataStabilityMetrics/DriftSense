@@ -62,18 +62,15 @@ def get_bin_edges(reference: Union[List[float], np.ndarray],
 
         If the input is not numeric where required, or if domain bins are improperly formatted.
 
-    Examples:
-    ---------
-    >>> get_bin_edges([1, 2, 3, 4, 5], bins=2, method="equal_width")
-    array([1., 3., 5.])
 
-    >>> get_bin_edges([10, 20, 30, 40, 50], bins=2, method="equal_freq")
-    array([10., 30., 50.])
-
-    >>> get_bin_edges([1, 2, 3, 4, 5], bins=[0, 2, 5], method="domain")
-    [0, 2, 5]
     """
-
+    
+    # ---- Currently Below commented logic is included in the calculate_feature_drift function
+    # ---- Domain Binning: Inferring the variable type in case categorical variable stored as numeric ----
+    #if method != "domain":
+    #    is_categorical = reference.dtype == 'object' or len(np.unique(reference)) < 10 # parameter to be added nbin_for_cat
+    
+    
     # ---- Domain Binning: supports categorical or numeric ----
     if method == "domain":
         # Validate bins is list-like
@@ -153,7 +150,6 @@ def get_bin_edges(reference: Union[List[float], np.ndarray],
         tree.fit(X, y)
         # Extract and return sorted thresholds
         thresholds = tree.tree_.threshold
-        print(thresholds)
         return np.sort(thresholds[thresholds > 0])  # Remove invalid splits (-2) 
 
     # ---- K-Means Based Binning -----

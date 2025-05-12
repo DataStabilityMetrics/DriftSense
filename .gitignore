@@ -9,5 +9,5 @@ deploy_key
 
 # Distribution / packaging
 build/
-dist/
+#dist/
 *.egg-info/

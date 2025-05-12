@@ -82,6 +82,8 @@ markdown_extensions:
   - attr_list
   - admonition
   - codehilite
+  #- fenced_code
+  #- tables
   - toc:
       permalink: true
       toc_depth: 2-3

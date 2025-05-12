@@ -1,7 +1,7 @@
 from typing import Dict
 import pandas as pd
 
-def get_stability_report(
+def get_drift_report(
     summary_df: pd.DataFrame,
     detailed_dfs: Dict[str, pd.DataFrame],
     file_path: str = "csi_report.html",

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "driftsense"
-version = "0.0.3"
+version = "0.0.5"
 description = "A Python package for data stability and drift detection and monitoring."
 readme = "README.md"
 requires-python = ">=3.8"
