@@ -24,7 +24,7 @@
 
 ## Returns
 
-- `np.ndarray`: An array of bin edge values, excluding the min and max of the data.
+- `np.ndarray`: An array of bin edge values.
 
 ---
 

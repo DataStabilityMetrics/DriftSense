@@ -4,7 +4,7 @@ This section explains how to bin features using the available methods in `DriftS
 
 ---
 
-## Equal Width Binning Example 1
+## Equal Width Binning Example
 
 ```python
 from driftsense import get_bin_edges
@@ -18,7 +18,7 @@ array([1., 2.33333333, 3.66666667, 5.])
 
 ---
 
-## Equal Frequency Binning Example 1
+## Equal Frequency Binning Example
 ```python
 from driftsense import get_bin_edges
 get_bin_edges([1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5], bins=3, method="equal_freq")

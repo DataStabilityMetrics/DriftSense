@@ -44,7 +44,7 @@ def get_bin_edges(reference: Union[List[float], np.ndarray],
 
     - target : array-like, optional
         
-        Required if method='adaptive'. Target variable used to guide DecisionTree-based binning.
+        Required if method = 'adaptive'. Target variable used to guide DecisionTree-based binning.
     
     Returns:
     --------
