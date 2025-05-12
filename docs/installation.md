@@ -31,7 +31,7 @@ pip install DriftSense
 ```bash
 git clone https://github.com/DataStabilityMetrics/DriftSense.git
 cd DriftSense
-pip install -r requirements.txt
+pip install .
 ```
 
 ---
