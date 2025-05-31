@@ -38,9 +38,9 @@ Use this guide to understand the function signatures, expected parameters, and e
 
 - [`create_drift_report`](./create_drift_report.md)
   
-  - generates drift or stability report of feature columns and target column in the dataset. 
+	- generates drift or stability report of feature columns and target column in the dataset. 
   
-  - Provides the checks to verify the numbers of records matches with the total counts in the individual feature drift calculation.
+	- Provides the checks to verify the numbers of records matches with the total counts in the individual feature drift calculation.
 
 ---
 

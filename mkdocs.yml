@@ -3,6 +3,8 @@ site_url: https://DataStabilityMetrics.github.io/DriftSense/
 repo_url: https://github.com/DataStabilityMetrics/DriftSense.git
 repo_name: DriftSense
 theme:
+  icon:
+    repo: fontawesome/brands/github-alt
   name: material
   favicon: './img/drift_sense.png'
   logo: './img/drift_sense.png'
@@ -13,13 +15,13 @@ theme:
 
   palette:
     - scheme: default
-      primary: blue grey
+      primary: indigo
       accent: light blue
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: blue grey
+      primary: indigo
       accent: light blue
       toggle:
         icon: material/weather-sunny
@@ -29,16 +31,24 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
     - navigation.top
     - content.code.copy
     - navigation.instant
+    - navigation.instant.progress
     - navigation.sections
     - toc.integrate
     - toc.expand
     - toc.follow
     - content.tabs.link
     - navigation.footer
+    - navigation.path
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    
   static_templates: []
 
 # Ensure a proper directory structure for assets
@@ -86,7 +96,7 @@ markdown_extensions:
   #- tables
   - toc:
       permalink: true
-      toc_depth: 2-3
+      toc_depth: 1-2
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.details

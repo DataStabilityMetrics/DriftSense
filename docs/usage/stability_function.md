@@ -164,15 +164,9 @@ create_drift_report(summary_df = summary_df,
 
 ## Notes
 
-- Binning strategy significantly affects the result; choose based on use case.
+- Binning strategy significantly affects the result; choose based on the use case.
 - Adaptive binning requires a target variable.
 - Feature stability/drift values above a threshold (e.g., 0.1 or 0.2) may indicate drift.
-
----
-
-## Notes
-
-- Drift values > 0.2 generally indicate significant drift.
 - Drift methods require **binning** to be performed. You can use `get_bin_edges()` to see what bins are generated using vrious binning strategies.
 - Target and model drift are often monitored **weekly/monthly** in regulated industries. In some cases, it gets monitored quarterly or semiannually. 
   This monitoring frequency is dependent on the business usage of the model.
@@ -182,11 +176,11 @@ create_drift_report(summary_df = summary_df,
 ## Recommended Monitoring Thresholds
 The Following guidance is applicable for PSI/CSI drift method 
 
-|Stability/Drift Threshold    |Interpretation                           |
-|-----------------------------|-----------------------------------------|
-|Drift < 0.1                  |Stable - No action needed                |
-|0.1 ≤ Drift ≤ 0.2            |Moderate Drift - Investigate if recurring|
-|Drift > 0.2                  |High Drift - Immediate attention required|
+|Stability/Drift Threshold    |Interpretation                                  |
+|-----------------------------|------------------------------------------------|
+|Drift < 0.1                  |Stable - No action needed                	   |
+|0.1 ≤ Drift ≤ 0.2            |Moderate Drift - Investigate if recurring       |
+|Drift > 0.2                  |Significant Drift - Immediate attention required|
 
 ---
 

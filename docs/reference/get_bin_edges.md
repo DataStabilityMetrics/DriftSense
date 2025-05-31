@@ -17,7 +17,7 @@
 |-----------|------|----------|-------------|
 | `data` | `np.ndarray` | ✅ Yes | Input array of numeric values |
 | `bins` | `int` | ✅ Yes | Number of bins |
-| `method` | `str` | ✅ Yes | Binning method: `"equal"`, `"quantile"`, or `"adaptive"` |
+| `method` | `str` | ✅ Yes | Binning method: `"equal_freq"`, `"equal_width"`, `"adaptive"` or `"domain"` |
 | `target` | `Optional[np.ndarray]` | ❌ Only for `"adaptive"` | Target array used for supervised binning |
 
 ---
